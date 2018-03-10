@@ -1,0 +1,20 @@
+{{#each model.gente as |persona|}}
+  <p class='mostrar'>
+    {{#if persona.esMujer}}
+    <strong>Nombre:</strong> <div class="mujer">
+       {{persona.nombre}}
+    </div>
+    <strong>Sexo:</strong> Mujer
+    <strong>Salario:</strong>{{persona.salario}}
+    {{else}}
+    <strong>Nombre:</strong>  <div class="hombre">
+       {{persona.nombre}}
+    </div>
+    <strong>Sexo:</strong> Hombre
+    <strong>Salario:</strong>{{persona.salario}}
+    {{/if}}
+  </p>
+{{/each}}
+
+<strong>Total de ganancias: </strong>{{model.total}}
+{{outlet}}
